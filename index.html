@@ -209,48 +209,62 @@
         <h2>Contact Us</h2>
         <form action="#" method="post" onsubmit="return false;">
 
-            <!-- 1- First Name field (req*) -->
-            <label for="first-name">First Name <span class="required">*</span></label> <!-- TO DO add Enter first name to field view -->
-            <input type="text" id="first-name" name="first-name" required aria-required="true" autocomplete="given-name">
+            <!-- 1- First Name Field -->
+            <label for="first-name">First Name <span class="required">*</span></label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter first name" required aria-required="true" autocomplete="given-name">
 
-            <!-- 2- Last Name field (req*) -->
-            <label for="last-name">Last Name <span class="required">*</span></label> <!-- TO DO add Enter last name to field view -->
-            <input type="text" id="last-name" name="last-name" required aria-required="true" autocomplete="family-name">
+            <!-- 2- Last Name Field -->
+            <label for="last-name">Last Name <span class="required">*</span></label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required aria-required="true" autocomplete="family-name">
 
 
             <!-- 5 - Preferred Contact Method (radio buttons) -->
             <fieldset>
-                <legend>Preferred Contact Method <span class="required">*</span></legend>
+            <legend>Preferred Contact Method <span class="required">*</span></legend>
 
                 <!-- Radio Option: Email -->
-                <label for="contact-email">Email</label>
-                <input type="radio" id="contact-email" name="contact-method" value="email" required aria-required="true">
+                <label for="contact-email"><input type="radio" id="contact-email" name="contact-method" value="email" required aria-required="true"> Email</label>
 
                 <!-- Radio Option: Phone -->
-                <label for="contact-phone">Phone</label>
-                <input type="radio" id="contact-phone" name="contact-method" value="phone" required aria-required="true">
+                <label for="contact-phone"><input type="radio" id="contact-phone" name="contact-method" value="phone"> Phone</label>
                 
                 <!-- Radio Option: Text -->
-                <label for="contact-phone">Text</label>
-                <input type="radio" id="contact-text" name="contact-method" value="text" required aria-required="true">
+                <label for="contact-text"><input type="radio" id="contact-text" name="contact-method" value="text"> Text</label>
             </fieldset>
 
             <!-- 3- Email Address field (req*) -->
             <label for="email">Email Address <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email"> <!-- TO DO add Enter Email to field view -->
+            <input type="email" id="email" name="email" placeholder="Enter email" required aria-required="true" autocomplete="email">
 
             <!-- 4 - Phone Number field (opt) -->
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Please enter exactly 10 digits (no letters or special characters)" autocomplete="tel"> <!-- TO DO add Enter telephone number to field view -->
+            <input type="tel" id="phone" name="phone" pattern="[\d\s\-()]{7,}" title="Please enter at least 7 digits (parentheses and dashes allowed)" placeholder="Enter phone number" autocomplete="tel">
 
              <!-- 6 - Message field (opt, textarea) -->
             <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+                    <!-- Destination -->
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Ibiza">Ibiza</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Majorca">Majorca</option>
+                        <option value="Seville">Seville</option>
+                        <option value="Tenerife">Tenerife</option>
+                        <option value="Valencia">Valencia</option>
+                    </select>
 
-            <!-- TO DO
-            Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-            Travel Time (Fall, Winter, Spring, Summer, Flexible)
-            -->
+                    <!-- Travel Time -->
+                    <label for="travel-time">Travel Time</label>
+                    <select id="travel-time" name="travel-time">
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Flexible">Flexible</option>
+                    </select>
 
                 <!-- 7 - Submit -->
             <input type="submit" value="Submit">

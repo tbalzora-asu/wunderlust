@@ -168,7 +168,6 @@ nav a {
   display: block;
   padding: 0.5rem;
 }
-
 /* MOBILE NAV COLOR OVERRIDES */
 @media screen and (max-width: 767px) {
   nav a {
@@ -199,10 +198,12 @@ nav a {
   grid-template-columns: 1fr;
   gap: 1rem;
 }
+
 #img-grid picture img {
   width: 100%;
   object-fit: cover;
 }
+
 #plan {
   background: var(--yellow);
   padding: 1rem;
@@ -230,27 +231,33 @@ nav a {
   width: 60px;
   height: 60px;
   margin: 0 auto;
-  filter: brightness(0) invert(1); /* icon color */
+  filter: brightness(0) invert(1);
 }
 
-#testimonials, #about, #contact {
+#testimonials {
   padding: 1rem;
 }
 
-#testimonials h3, #about h3, #contact h3 {
+#testimonials h3 {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
 }
 
+#testimonials div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
 #testimonials section {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 #about {
   background: var(--blue);
   color: var(--white);
+  padding: 1rem;
 }
 
 #about div {
@@ -322,7 +329,7 @@ footer {
     background: var(--yellow);
     color: var(--black);
   }
-/*start grid sec tab*/
+
   #img-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -339,19 +346,16 @@ footer {
   #img-grid picture {
     grid-area: bottom;
   }
-  /*end grid sec tab*/
+
+  #testimonials div {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   #plan div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-  }
-
-  #testimonials div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
   }
 
   #about div {
@@ -373,22 +377,25 @@ footer {
   }
 
   #intro {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
     gap: 2rem;
     padding: 2rem 3rem;
   }
 
+  #intro h2,
   #intro p {
-    flex: 1;
+    text-align: left;
   }
-/*start grid sec desk*/
-#img-grid {
+
+  #img-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "top-left top-right" "bottom bottom";
+    grid-template-areas:
+      "top-left top-right"
+      "bottom bottom";
     gap: 1rem;
   }
   #img-grid img:nth-child(1) {
@@ -400,9 +407,20 @@ footer {
   #img-grid picture {
     grid-area: bottom;
   }
-  /*end grid sec desk*/
 
-  #testimonials div, #about div {
+  #testimonials div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+  #testimonials section {
+    text-align: center;
+    max-width: 200px;
+  }
+
+  #about div {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

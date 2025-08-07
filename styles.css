@@ -109,7 +109,6 @@ h4, p, q, small, nav, button, label, input, select {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 header {
@@ -252,6 +251,10 @@ nav a {
 
 #testimonials section {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 #about {

@@ -48,3 +48,153 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* ==================== VARIABLES ==================== */
+:root {
+  --yellow: #F6D64A;
+  --teal: #55BCD5;
+  --purple: #9B26B0;
+  --blue: #499BD2;
+  --dark-gray: #222222;
+  --light-gray: #EAEAEA;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --font-display: 'Molle', cursive;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background-color: var(--white);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+h4, p, q, small, nav, button, label, input, select {
+  font-family: var(--font-body);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 8px;
+  z-index: 100;
+}
+#skip:focus {
+  top: 0;
+}
+
+header {
+  background: linear-gradient(to bottom, var(--teal), white);
+  padding: 1rem;
+  text-align: center;
+}
+
+header img {
+
+}
+
+header h1 {
+
+}
+
+nav ul {
+
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav a {
+
+
+nav .active a,
+nav a:hover {
+
+}
+
+#intro {
+
+}
+
+#intro h2 {
+
+}
+
+#intro p {
+
+}
+
+#img-grid {
+
+}
+
+#plan {
+
+
+#plan h3 {
+
+}
+
+#plan section {
+
+}
+
+#plan img {
+
+}
+
+#testimonials, #about, #contact {
+
+}
+
+
+
+
+#about {
+
+}
+
+form {
+
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+  border: 2px solid var(--purple);
+
+}
+
+input[type="submit"] {
+
+}
+
+footer {
+
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* ---------- MEDIUM SCREEN (Tablet) ---------- */
+@media screen and (min-width: 768px) {
+ 
+}
+
+/* ---------- LARGE SCREEN (Desktop) ---------- */
+@media screen and (min-width: 1024px) {
+  
+}

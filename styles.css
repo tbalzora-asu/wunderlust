@@ -278,6 +278,21 @@ nav a {
 #about section p {
   color: var(--black);
 }
+#about h3,
+#contact h3 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.custom-select { 
+  display: block; 
+}
+#plan h3, #testimonials h3, #about h3, #contact h3 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+}
 
 form {
   display: flex;
@@ -375,8 +390,8 @@ footer {
 
   #intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     align-items: start;
   }
 
@@ -390,6 +405,7 @@ footer {
     grid-template-areas:
       "top-left top-right"
       "bottom bottom";
+    gap: 1rem;
   }
   #img-grid img:nth-child(1) {
     grid-area: top-left;
@@ -428,16 +444,20 @@ fieldset {
 
   #intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(280px, 1fr) minmax(420px, 1.6fr);
+    grid-auto-rows: auto;
+    column-gap: 2rem;
     align-items: start;
-    gap: 2rem;
     padding: 2rem 3rem;
   }
 
   #intro h2,
   #intro p {
+    grid-column: 1 / 2;   
     text-align: left;
   }
+  #intro h2 { margin-bottom: .5rem; }
+  #intro p  { margin-top: 0; }
 
   #img-grid {
     display: grid;
@@ -497,10 +517,15 @@ fieldset {
     flex-direction: column;
     gap: 1rem;
   }
+  fieldset {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
 
   input[type="submit"] {
-    grid-column: span 3;
-    width: 200px;
+    grid-column: 1 / -1;
     justify-self: end;
+    width: 200px;
   }
 }

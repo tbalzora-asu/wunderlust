@@ -546,6 +546,18 @@ fieldset {
   row-gap: 1rem;
 }
 
+#names { grid-column: 1; }                         
+#contact form fieldset { grid-column: 2; }       
+#nums { grid-column: 2; }                          
+#selects { grid-column: 3; }                        
+
+
+#contact input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: 200px;
+}
+
 
   #names,
   #nums,
